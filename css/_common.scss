@@ -1,0 +1,379 @@
+@import '_mixins.scss';
+@import '_fonts.scss';
+@import '_vars.scss';
+
+
+body {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul, a {
+  @include noDecorations;
+}
+
+h1, h2, h3, h4, p, form, button {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  @include btn;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+#header {
+  background-color: $black;
+  padding: 23px 0 22px;
+}
+
+#about {
+  background-color: $black;
+}
+
+#footer {
+  background-color: $black;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1290px;
+}
+
+.header-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  grid-column-start: 3;
+  grid-column-end: 8;
+  @include fontTTRegular;
+  color: $white;
+  font-size: 16px;
+
+  &__list {
+    justify-content: space-between;
+  }
+}
+
+.header-logo {
+  grid-column-start: 1;
+}
+
+.search-btn {
+  grid-column-start: 10;
+}
+
+.master-class-section {
+  padding: 41px 0 $sectionPadding;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: $gap;
+
+  &__title {
+    @include sectionTitle;
+    margin-bottom: 10px;
+  }
+
+  &__photos {
+    gap: $gap;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.photos {
+  &__photo1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  &__photo2 {
+    grid-row-start: 2;
+  }
+}
+
+.announcement {
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 60px 58px;
+  background-image: url('../imgs/img1-1920.webp');
+  background-size: cover;
+
+  &__tag {
+    @include tag;
+    top: 15px;
+    right: 15px;
+  }
+
+  &__text {
+    @include smallText;
+    color: $white;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    color: $white;
+    font-family: 'tt-firs-neue-trial', Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 104%;
+  }
+}
+
+
+.about-section {
+  padding: 27px 0 $sectionPadding;
+
+  &__title {
+    margin-bottom: 2px;
+    @include sectionTitle;
+    color: $white;
+  }
+
+  &__content {
+    gap: $gap;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__text {
+    @include smallText;
+    color: $lightGrey;
+    line-height: 28px;
+  }
+
+  &__subtitle {
+    margin-bottom: 14px;
+    @include formTitle;
+    color: $white;
+  }
+
+  &__right img {
+    margin-bottom: 12px;
+  }
+}
+
+
+
+.about-section__form.form {
+  gap: $gap;
+  grid-template-columns: 5fr 1fr;
+}
+
+.about-section__form .form__input {
+  @include form;
+  background-color: $darkGrey;
+}
+
+.about-section__form .form__input::placeholder {
+  @include smallText;
+  color: $lightGrey;
+}
+
+
+.projects-section {
+  padding: 65px 0 0;
+
+  &__title {
+    @include sectionTitle;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    gap: $gap;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
+  }
+
+  &__list {
+    gap: $gap;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  &__small-article {
+    position: relative;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  &__big-article {
+    position: relative;
+    padding: 25px 308px 32px 31px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.big-article__title {
+  @include sectionTitle;
+  color: $white;
+  line-height: 24px;
+  margin-bottom: 7px;
+}
+
+.big-article__date {
+  @include date;
+  color: $white;
+  margin-bottom: 4px;
+
+}
+
+
+.big-article__text {
+  @include smallText;
+  color: $white;
+  margin-bottom: auto;
+}
+
+.big-article__btn {
+  background-color: rgba(0, 0 ,0 ,0);
+  outline: 3px solid $mainOrange;
+  padding: 12px 20px;
+}
+
+.big-article-1 {
+  background-image: url("../imgs/proj-4-1920.webp")
+}
+
+.big-article-2 {
+  background-image: url("../imgs/proj-5-1920.webp")
+}
+
+
+.projects-section__big-article .article__tag,  .projects-section__small-article .article__tag{
+  @include tag;
+  padding: 5px 15px;
+  right: 6px;
+  top: 8px;
+}
+
+.projects-section__small-article .small-article__text {
+  @include smallText;
+}
+
+.projects-section__small-article img {
+  margin-bottom: 18px;
+}
+
+.small-article__date {
+  @include date;
+  color: $grey;
+  margin-top: auto;
+}
+
+.contacts-section {
+  padding: 65px 0;
+
+  &__title {
+    @include sectionTitle;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    gap: $gap;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  &__map {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  &__right {
+    flex-direction: column;
+  }
+
+  &__form {
+    flex-direction: column;
+    margin-top: -11px;
+  }
+}
+
+.contacts-section__black-block {
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  width: 410px;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(32, 32, 32, 0.85);
+};
+
+.contacts-section__black-block .black-block__text {
+  padding: 0 60px;
+}
+
+.contacts-section__black-block .black-block__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+[class*='ground-pane'] {
+  filter: grayscale(1);
+}
+
+.contacts-section__black-block .black-block__text .text__title {
+  @include formTitle;
+  color: $white;
+}
+
+.contacts-section__black-block .black-block__text address .text__main {
+  @include fontTTRegular;
+  font-size: 16px;
+  color: $lightGrey;
+  font-style: normal;
+  line-height: 28px;
+}
+
+.contacts-section__black-block .black-block__text .text__phone {
+  align-items: center;
+  @include fontTTRegular;
+  font-size: 16px;
+  color: $mainOrange;
+  font-style: normal;
+}
+
+.contacts-section__right .right__subtitle {
+  @include formTitle;
+  color: $black;
+}
+
+.contacts-section__right .right__comment {
+  @include smallText;
+  color: $grey;
+  margin-bottom: 18px;
+}
+
+.contacts-section__form .form__input {
+  background-color: $darkWhite;
+  border: none;
+  padding: 15px 23px;
+  margin-bottom: 23px;
+}
+
+.contacts-section__form .form__comment {
+  height: 120px;
+  resize: none;
+}
+
+.contacts-section__form .form__btn {
+  align-self: flex-start;
+}

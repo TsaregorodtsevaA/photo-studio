@@ -1,0 +1,70 @@
+@import '_vars.scss';
+
+@mixin font {
+  font-display: swap;
+  font-style: normal;
+}
+
+@mixin noDecorations {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+@mixin btn {
+  padding: 15px 22px;
+  border: none;
+  background-color: $mainOrange;
+  color: #FFF;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@mixin fontTTRegular {
+  font-family: 'tt-firs-neue-trial', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+@mixin sectionTitle {
+  font-family: 'tt-firs-neue-trial', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@mixin tag {
+  position: absolute;
+  padding: 6px 16px;
+  background-color: $black;
+  color: $white;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin smallText {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin formTitle {
+  font-family: 'tt-firs-neue-trial', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@mixin form {
+  padding: 15px 21px;
+}
+
+@mixin date {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  align-items: center;
+}

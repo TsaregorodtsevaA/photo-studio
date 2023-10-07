@@ -1,0 +1,34 @@
+@import '_mixins.scss';
+
+@font-face {
+  @include font;
+  font-family: "tt-firs-neue-trial";
+  src: local("tt-firs-neue-trial-bold"),
+  url("../fonts/tt_firs_neue_trial_bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  @include font;
+  font-family: "tt-firs-neue-trial";
+  src: local("tt-firs-neue-trial-regular"),
+  url("../fonts/tt_firs_neue_trial_regular.woff") format("woff");
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: "Roboto";
+  @include font;
+  src: local("roboto-bold"),
+  url("../fonts/roboto-bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto";
+  @include font;
+  src: local("roboto-regular"),
+  url("../fonts/roboto-regular.woff") format("woff");
+  font-weight: 400;
+}
